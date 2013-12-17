@@ -1,4 +1,4 @@
-# exception_notification-hato [![](https://travis-ci.org/kentaro/exception_notification-hato.png)](http://travis-ci.org/kentaro/exception_notification-hato)
+# exception_notification-hato [![](https://travis-ci.org/kentaro/exception_notification-hato_notifier.png)](http://travis-ci.org/kentaro/exception_notification-hato_notifier)
 
 `ExceptionNotifier::HatoNotifier` is a custom notifier for [Exception Notification](http://smartinez87.github.io/exception_notification/). It sends exception notification via [Hato](https://github.com/kentaro/hato).
 
