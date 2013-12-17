@@ -1,4 +1,4 @@
-# ExceptionNotification::Hato
+# exception_notification-hato [![](https://travis-ci.org/kentaro/exception_notification-hato.png)](http://travis-ci.org/kentaro/exception_notification-hato)
 
 TODO: Write a gem description
 
