@@ -1,6 +1,30 @@
 # exception_notification-hato [![](https://travis-ci.org/kentaro/exception_notification-hato.png)](http://travis-ci.org/kentaro/exception_notification-hato)
 
-TODO: Write a gem description
+`ExceptionNotifier::HatoNotifier` is a custom notifier for [Exception Notification](http://smartinez87.github.io/exception_notification/). It sends exception notification via [Hato](https://github.com/kentaro/hato).
+
+## Usage
+
+As other exception notifiers, add settings at the environments:
+
+  * `host` is the host of Hato server
+  * `port` is the port of the server (optional, default is `9699`)
+  * `api_key` is to set the API key if the server requires it (optional)
+  * `template` is to set templates for tag and message to be sent to Hato
+
+### Example
+
+```ruby
+Whatever::Application.config.middleware.use ExceptionNotification::Rack,
+  hato: {
+    host:     'localhost',
+    port:     9699,
+    api_key:  'YOUR API KEY',
+    template: {
+        tag:     ->(exception, options) { "exception.#{exception.class}" },
+        message: ->(exception, options) { "Exception: #{exception.class}: #{exception.message}" },
+    },
+  }
+```
 
 ## Installation
 
@@ -15,10 +39,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install exception_notification-hato
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
