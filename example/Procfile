@@ -1,0 +1,2 @@
+hato: bundle exec hato -c hato_config.rb
+app: bundle exec rackup

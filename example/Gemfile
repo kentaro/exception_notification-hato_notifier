@@ -1,0 +1,9 @@
+source 'https://rubygems.org'
+
+gem 'exception_notification'
+gem 'exception_notification-hato_notifier', path: '../'
+
+gem 'hato'
+gem 'hato-plugin-ikachan'
+gem 'sinatra'
+gem 'foreman'
