@@ -43,8 +43,9 @@ module ExceptionNotifier
         client = Net::HTTP.new(@host, @port)
         req    = Net::HTTP::Post.new('/notify')
 
-        req.form_data = { tag: tag, message: message }
-        req.form_data.merge!(api_key: api_key) if @api_key
+        form_data = { 'tag' => tag, 'message' => message }
+        form_data.merge!('api_key' => @api_key) if @api_key
+        req.set_form_data(form_data)
 
         client.request(req)
       end
